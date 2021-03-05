@@ -1,4 +1,4 @@
-namespace Core.Domain.OperationalTask
+namespace Core.Domain.Entities
 {
     public class OperationalTask
     {
