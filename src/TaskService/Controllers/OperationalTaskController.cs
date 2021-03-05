@@ -1,8 +1,7 @@
-
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace TaskService.Controllers
+namespace OperationalTaskService.Controllers
 {
     public class TaskController : Controller 
     {
@@ -11,7 +10,7 @@ namespace TaskService.Controllers
             
         }
 
-        [HttpGet]
+        [HttpGet("/")]
         public async Task<IActionResult> Get()
         {
             return Ok("I contain all tasks");

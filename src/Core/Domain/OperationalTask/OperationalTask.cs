@@ -1,11 +1,11 @@
-namespace Core.Domain.Task
+namespace Core.Domain.OperationalTask
 {
-    public class Task
+    public class OperationalTask
     {
         public string Title { get; private set; }
         public int EstimateInWholeHours { get; private set; }
         public string AdditionalContext { get; private set; }
-        public Task()
+        public OperationalTask()
         {
             
         }
