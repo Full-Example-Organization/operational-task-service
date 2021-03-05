@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.Domain;
 using Core.Application.Services;
 using Core.Application.Services.Implementations;
 using Infrastructure.Persistence;
@@ -13,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Infrastructure.Persistence.Repositories;
 
 namespace OperationalTaskServiceAPI
 {
@@ -30,6 +32,7 @@ namespace OperationalTaskServiceAPI
         {
             services.AddSingleton<StubDb>();
             services.AddScoped<OperationalTaskService, OperationalTaskServiceImpl>();
+            services.AddScoped<OperationalTaskRepository, OperationalTaskRepositoryImpl>();
             services.AddControllers();
         }
 
