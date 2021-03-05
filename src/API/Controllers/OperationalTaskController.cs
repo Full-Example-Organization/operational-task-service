@@ -1,19 +1,23 @@
 using System.Threading.Tasks;
+using Core.Application.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace OperationalTaskServiceAPI.Controllers
 {
-    public class TaskController : Controller 
+    // [Route("tasks")]
+    public class OperationalTaskController : Controller 
     {
-        public TaskController()
+        private readonly OperationalTaskService taskService;
+        public OperationalTaskController(OperationalTaskService taskService)
         {
-            
+            this.taskService = taskService;
         }
 
-        [HttpGet("/")]
+        // [HttpGet("")]
         public async Task<IActionResult> Get()
         {
-            return Ok("I contain all tasks");
+            if (!ModelState.IsValid) { return BadRequest(); }
+            return Ok(await taskService.GetOperationalTask());
         }
     }
 }
