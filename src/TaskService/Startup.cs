@@ -42,9 +42,10 @@ namespace TaskService
 
             app.UseAuthorization();
 
+            // TODO: Meaningful mapping
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
