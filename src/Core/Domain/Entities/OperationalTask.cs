@@ -1,7 +1,10 @@
+using System;
+
 namespace Core.Domain.Entities
 {
     public class OperationalTask
     {
+        public Guid Id { get; private set; }
         public string Title { get; private set; }
         public int EstimateInWholeHours { get; private set; }
         public string AdditionalContext { get; private set; }

@@ -8,6 +8,5 @@ namespace Core.Domain.Repositories
         Task<OperationalTask> Add(string id);
         Task<OperationalTask> Find(string id);
         Task<OperationalTask> Remove(string id);
-        // Task<OperationalTask> Get(string id);
     }
-}
+} 
