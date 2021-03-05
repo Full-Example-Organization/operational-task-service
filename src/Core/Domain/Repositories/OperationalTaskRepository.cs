@@ -1,12 +1,12 @@
 using System.Threading.Tasks;
-using Core.Domain.Entities;
 
-namespace Core.Domain.Repositories
+namespace Core.Domain
 {
-    public interface IOperationalTaskRepository
+    public interface OperationalTaskRepository
     {
         Task<OperationalTask> Add(string id);
         Task<OperationalTask> Find(string id);
+        Task<OperationalTask> FindByTitle(string title);
         Task<OperationalTask> Remove(string id);
     }
 } 

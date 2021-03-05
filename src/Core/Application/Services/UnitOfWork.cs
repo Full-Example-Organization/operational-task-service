@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace Core.Application.Services
 {
-    public interface IUnitOfWork
+    public interface UnitOfWork
     {
         Task CompleteAsync();
     }

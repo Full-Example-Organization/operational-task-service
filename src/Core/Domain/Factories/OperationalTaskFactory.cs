@@ -1,8 +1,6 @@
-using Core.Domain.Entities;
-
-namespace Core.Domain.Factories
+namespace Core.Domain
 {
-    public interface IOperationalTaskFactory
+    public interface OperationalTaskFactory
     {
         OperationalTask Create();
     }

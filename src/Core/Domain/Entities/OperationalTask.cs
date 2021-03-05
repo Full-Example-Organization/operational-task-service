@@ -1,6 +1,6 @@
 using System;
 
-namespace Core.Domain.Entities
+namespace Core.Domain
 {
     public class OperationalTask
     {
@@ -8,9 +8,10 @@ namespace Core.Domain.Entities
         public string Title { get; private set; }
         public int EstimateInWholeHours { get; private set; }
         public string AdditionalContext { get; private set; }
-        public OperationalTask()
+        public OperationalTask(string title)
         {
-            
+            Id = Guid.NewGuid();
+            SetTitle(title);
         }
 
         private void SetTitle(string title)

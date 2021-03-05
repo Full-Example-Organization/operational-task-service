@@ -1,9 +1,10 @@
-using Core.Domain.Entities;
+using System.Threading.Tasks;
+using Core.Domain;
 
-namespace Core.Domain.Services
+namespace Core.Application.Services
 {
-    public interface IOperationalTaskService
+    public interface OperationalTaskService
     {
-        OperationalTask GetOperationalTask();
+        Task<OperationalTask> GetOperationalTask();
     }
 }
