@@ -14,12 +14,9 @@ namespace Core.Domain
             SetTitle(title);
         }
 
-        private void SetTitle(string title)
+        public void SetTitle(string title)
         {
-            if (string.IsNullOrEmpty(title))
-            {
-                throw new System.ArgumentException($"'{nameof(title)}' cannot be null or empty.", nameof(title));
-            }
+            if (string.IsNullOrEmpty(title)) { throw new System.ArgumentException($"'{nameof(title)}' cannot be null or empty.", nameof(title)); }
 
             Title = title;
         }
