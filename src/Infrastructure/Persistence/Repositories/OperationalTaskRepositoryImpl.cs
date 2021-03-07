@@ -12,7 +12,7 @@ namespace Infrastructure.Persistence.Repositories
             this.db = db;
         }
 
-        public Task<OperationalTask> Add(string id)
+        public Task Add(string id)
         {
             throw new System.NotImplementedException();
         }
@@ -27,7 +27,7 @@ namespace Infrastructure.Persistence.Repositories
             throw new System.NotImplementedException();
         }
 
-        public Task<OperationalTask> Remove(string id)
+        public Task Remove(string id)
         {
             throw new System.NotImplementedException();
         }
